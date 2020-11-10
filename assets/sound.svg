@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="67px" height="69px" viewBox="0 0 67 69" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Sound-Button" transform="translate(0.5 0.5)">
+    <g id="Group-3" transform="translate(0 0.4799812)">
+      <path d="M32.7289 0C14.653 0 0 14.8417 0 33.1503C0 51.4558 14.653 66.3006 32.7289 66.3006C50.8048 66.3006 65.4578 51.4558 65.4578 33.1503C65.4578 14.8417 50.8048 0 32.7289 0" transform="translate(-0.00010153846 0.5494021)" id="Fill-1" fill="#131A1C" fill-opacity="0.40392157" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+    </g>
+    <path d="M14.8744 0L6.9036 8.07236L1.43982 8.07236L0 9.51426L0 17.6679L1.29868 18.9812L6.83862 18.9812L14.8764 27.1256L16.3761 27.1256L16.3761 0.00205692L14.8744 0Z" transform="translate(16.36404 20.613789)" id="Fill-4" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M3.66046 11.5928C3.66046 15.6583 2.28462 19.3916 0 22.372L0.803169 23.1856C4.10622 20.4334 6.21517 16.263 6.21517 11.5928C6.21517 6.92255 4.10622 2.75215 0.803169 0L0 0.81351C2.28462 3.79192 3.66046 7.52728 3.66046 11.5928" transform="translate(42.792877 22.549656)" id="Fill-6" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M1.90588 7.31645C1.90588 9.66853 1.20323 11.8509 0 13.6631L0.957508 14.6329C2.80348 12.7611 3.95188 10.1735 3.95188 7.31645C3.95188 4.45939 2.80348 1.87179 0.957508 0L0 0.969836C1.20323 2.78095 1.90588 4.96437 1.90588 7.31645" transform="translate(36.88547 26.825983)" id="Fill-8" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

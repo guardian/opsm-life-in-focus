@@ -1,0 +1,312 @@
+
+
+<div id="Header">
+    <div class="frame padding-vertical-0">
+        <div class="brand-bar">
+            <div class="grid-x align-justify text-center medium-text-left">
+                <div class="cell medium-order-2 medium-shrink">
+                    <a href="{{sheets.global[0].logoCta}}" target="_blank"><img class="display-inline" class="brand" src="{{assetsPath}}/brand.svg" alt="{{sheets.global[0].Header}}" /></a>
+                </div>
+                <div class="cell medium-auto medium-order-1">
+                    <div class="tag">
+                        {{&sheets.global[0].tag}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frame text-center padding-top-0">
+        <div class="hero bg-video-container" >
+            {{#with videos.hero}}
+            <video id={{key}} playsinline autoplay loop muted src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+            {{/with}}
+            <div id="headline" class="block">
+                <h1>
+                    {{&sheets.global[0].headline}}
+            </h1>
+                
+                <div id="standfirst">
+                    {{&sheets.global[0].standfirst}}
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <article class="frame bright padding-top-0">
+        <div class="grid-x align-center">
+            <div class="column medium-8 large-6">
+                <div class="intro">
+                    {{&sheets.global[0].intro}}
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<section class="chapter-1">
+    <div class="frame article-1 bg-video-container fix-on-view">
+        {{#with videos.ch1bg}}
+        <video class='fix' id={{key}} playsinline autoplay loop muted src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+        {{/with}}
+        <article class="grid-container fluid position-relative">
+        
+            <div class="grid-x align-center">
+                <div class="column medium-8 large-6">
+                    <header id="ch1-heading text-center">
+                        {{&sheets.chapter1[0].heading}}
+                    </header>
+                    
+                </div>
+            </div>
+            <div class="grid-x align-center">
+                <div class="column medium-8">
+                    <img class=" padding-vertical-2" src="{{assetsPath}}/images/ipswich_map.png" alt="Ipswich map">
+                </div>
+            </div>
+            <div class="grid-x align-center">
+                <div class="column medium-8 large-5">
+                    <div class="block-1">
+                        {{&sheets.chapter1[0].block1}}
+                    </div>
+                </div>
+            </div>
+            <ScrollNextButton />
+            
+        </article>
+    </div>
+
+    <article class="frame bright scroll-play-video">
+        <!-- <div class="grid-x align-center">
+            <div class="column medium-6 large-6">
+                <header class="interview1-heading">
+                    <h2 class="text-center">{{&sheets.chapter1[0].interview1Heading}}</h2>
+                </header>
+            </div>
+        </div> -->
+        <div class="video-container flex-container align-center padding-vertical-2">
+            <div class="video">
+                {{#with videos.ch1a}}
+                <nav>
+                    <btnCaptions key="{{key}}"/>
+                    <btnPlay key='{{key}}' playing="{{playing}}" on-click="videotoggle" />
+                    <btnMute key="{{key}}" muted="{{active.muted}}" />
+                </nav>
+                <video id="{{key}}" class="shaka {{#if scrollPlay}}scroll-play{{/if}}" playsinline poster="{{assetsPath}}/video/poster/{{file}}.jpg">
+                    {{#if subs}}
+                    <track label="English" kind="subtitles" srclang="en" src="{{assetsPath}}/video/{{subs}}">
+                    {{/if}}
+                </video>
+                {{/with}}
+
+            </div>
+        </div>
+    </article>
+
+    <article class="frame bright scroll-play-video padding-top-0">
+        <!-- <div class="grid-x align-center">
+            <div class="column medium-6 large-6">
+                <header class="interview2-heading">
+                    <h2 class="text-center">{{&sheets.chapter1[0].interview2Heading}}</h2>
+                </header>
+            </div>
+        </div> -->
+        <div class="video-container flex-container align-center padding-vertical-2">
+            <div class="video">
+                {{#with videos.ch1b}}
+                <nav>
+                    <btnCaptions key="{{key}}"/>
+                    <btnPlay key='{{key}}' playing="{{playing}}" on-click="videotoggle" />
+                    <btnMute key="{{key}}" muted="{{active.muted}}" />
+                </nav>
+                <video id="{{key}}" class="shaka {{#if scrollPlay}}scroll-play{{/if}} " playsinline poster="{{assetsPath}}/video/poster/{{file}}.jpg">
+                    {{#if subs}}
+                    <track label="English" kind="subtitles" srclang="en" src="{{assetsPath}}/video/{{subs}}">
+                    {{/if}}
+                </video>
+                {{/with}}
+            </div>
+        </div>
+    </article>
+    
+    <div class="frame steps fix-on-view">
+        <div class="fix" style="background-image: url({{assetsPath}}/images/steps_bg.jpg);"></div>
+        <div class="grid-x align-center position-relative">
+            <div class="column">
+                <h2 class="text-center">{{&sheets.chapter1[0].stepsHeading}}</h2>
+    
+                <ul class="test-steps">
+                    <li>
+                        {{&sheets.chapter1[0].step1}}
+                        {{#with videos.step1}}
+                        <video id="{{key}}" class="{{#if scrollPlay}}scroll-play{{/if}}" loop playsinline {{#if muted}}muted{{/if}} src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+                        {{/with}}
+                    </li>
+                    <li>
+                        {{&sheets.chapter1[0].step2}}
+                        {{#with videos.step2}}
+                        <video id="{{key}}" class="{{#if scrollPlay}}scroll-play{{/if}}" loop playsinline {{#if muted}}muted{{/if}} src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+                        {{/with}}
+                    </li>
+                    <li>
+                        {{&sheets.chapter1[0].step3}}
+                        {{#with videos.step3}}
+                        <video id="{{key}}" class="{{#if scrollPlay}}scroll-play{{/if}}" loop playsinline {{#if muted}}muted{{/if}} src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+                        {{/with}}
+                    </li>
+                    <li>
+                        {{&sheets.chapter1[0].step4}}
+                        {{#with videos.step4}}
+                        <video id="{{key}}" class="{{#if scrollPlay}}scroll-play{{/if}}" loop playsinline {{#if muted}}muted{{/if}} src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+                        {{/with}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <article class="frame bright scroll-play-video">
+
+        <div class="video-container flex-container align-center padding-vertical-2">
+            <div class="video">
+                {{#with videos.ch1c}}
+                <nav>
+                    <btnCaptions key="{{key}}"/>
+                    <btnPlay key='{{key}}' playing="{{playing}}" on-click="videotoggle" />
+                    <btnMute key="{{key}}" muted="{{active.muted}}" />
+                </nav>
+                <video id="{{key}}" class="shaka {{#if scrollPlay}}scroll-play{{/if}}" playsinline poster="{{assetsPath}}/video/poster/{{file}}.jpg">
+                    {{#if subs}}
+                    <track label="English" kind="subtitles" srclang="en" src="{{assetsPath}}/video/{{subs}}">
+                    {{/if}}
+                </video>
+                {{/with}}
+            </div>
+        </div>
+    </article>
+    
+    <article class="frame article-2 bg-video-container fix-on-view">
+        {{#with videos.ch1outrobg}}
+        <video class='fix' id={{key}} playsinline autoplay loop muted src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+        {{/with}}
+        <div class="grid-x align-center position-relative">
+            <div class="column medium-6 large-6">
+                <div class="outro">
+                    {{&sheets.chapter1[0].outro}}
+                </div>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<section class="chapter-2">
+    <div class="frame article-1 bg-video-container fix-on-view">
+        {{#with videos.ch2bg}}
+        <video class='fix' id={{key}} playsinline autoplay loop muted src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+        {{/with}}
+        <article class="grid-container fluid position-relative">
+        
+            <div class="grid-x align-center">
+                <div class="column medium-8 large-6">
+                    <header class="heading text-center">
+                        {{&sheets.chapter2[0].heading}}
+                    </header>
+                    
+                </div>
+            </div>
+            <div class="grid-x align-center">
+                <div class="column medium-8">
+                    <img class=" padding-vertical-2" src="{{assetsPath}}/images/rozelle_map.png" alt="Rozelle map">
+                </div>
+            </div>
+            <div class="grid-x align-center">
+                <div class="column medium-8 large-5">
+                    <div class="block-1">
+                        {{&sheets.chapter2[0].block1}}
+                    </div>
+                </div>
+            </div>
+            <ScrollNextButton />
+            
+        </article>
+    </div>
+
+    <article class="frame bright scroll-play-video">
+        <div class="grid-x align-center">
+            <!-- <div class="column medium-8 large-6">
+                <header class="interview1-heading">
+                    <h2 class="text-center">
+                        {{&sheets.chapter2[0].interview1Heading}}
+                        </h2>
+                </header>
+            </div> -->
+        </div>
+        <div class="video-container flex-container align-center padding-vertical-2">
+            <div class="video">
+                {{#with videos.ch2a}}
+                <nav>
+                    <btnCaptions key="{{key}}"/>
+                    <btnPlay key='{{key}}' playing="{{playing}}" on-click="videotoggle" />
+                    <btnMute key="{{key}}" muted="{{active.muted}}" />
+                </nav>
+                <video id="{{key}}" class="shaka {{#if scrollPlay}}scroll-play{{/if}}" playsinline poster="{{assetsPath}}/video/poster/{{file}}.jpg">
+                    {{#if subs}}
+                    <track label="English" kind="subtitles" srclang="en" src="{{assetsPath}}/video/{{subs}}">
+                    {{/if}}
+                </video>
+                {{/with}}
+            </div>
+        </div>
+    </article>
+
+    <article class="frame article-2 bg-video-container fix-on-view">
+        {{#with videos.ch2outrobg}}
+        <video class='fix' id={{key}} playsinline autoplay loop muted src="{{assetsPath}}/video/{{file}}.mp4" poster="{{assetsPath}}/video/poster/{{file}}.jpg"></video>
+        {{/with}}
+        <div class="grid-x align-center position-relative">
+            <div class="column medium-8 large-6">
+                <div class="outro">
+                    {{&sheets.chapter2[0].outro}}
+                </div>
+            </div>
+        </div>
+    </article>    
+</section>
+
+<footer>
+    <div class="frame">
+        <div class="grid-x align-center">
+            <div class="column medium-8 large-6">
+                {{&sheets.global[0].cta}}
+            </div>
+        </div>
+        <div class="grid-container quad-hr">
+            <div class="hr"></div>
+            <div class="hr"></div>
+            <div class="hr"></div>
+            <div class="hr"></div>
+        </div>
+        <div class="frame padding-bottom-0">
+            <div id="social"></div>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="frame">
+        <div class="">
+            <div class="grid-container">
+                <h3 class="padding-bottom-1">{{&sheets.global[0].relatedContentTitle}}</h3>
+                <ul class="list-unstyled related-content">
+                    {{#each sheets.related}}
+                    <li>
+                        <a href="{{link}}" target="_blank">{{&label}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="text-center padding-vertical-2">
+                    {{&sheets.global[0].credits}}
+                </div>
+                        
+            </div>
+        </div>
+    </div>
+</footer>

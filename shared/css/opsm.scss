@@ -1,0 +1,382 @@
+// @import "./node_modules/bulma/bulma";
+@import "./node_modules/foundation-sites/scss/foundation";
+
+// @include foundation-everything($prototype: true);
+
+@include foundation-prototype-classes;
+@include foundation-xy-grid-classes;
+@include foundation-visibility-classes;
+@include foundation-flex-classes;
+
+@include foundation-text-alignment;
+
+$headingFont: 'Guardian Headline Light';
+$bodyFont: 'TS3 Text Sans';
+@font-face {
+    font-family: $headingFont;
+    src: url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Light.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Light.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/garnett/GHGuardianHeadline-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: $bodyFont;
+    src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff2") format("woff2"),
+    url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff") format("woff"),
+    url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+$c-orange: #F3AC59;
+
+.c-orange {
+    color: $c-orange;
+}
+.interactive-wrapper {
+    background-color: black;
+}
+:root {
+    --c-orange: #{$c-orange};
+}
+h1, h2, h3, h4 {
+    color: var(--c-orange);
+    font-family: $headingFont;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 3.75rem;
+}
+h2 {
+    font-size: 2rem;
+    @include breakpoint(medium) {
+        font-size: 2.5rem;
+
+    }
+}
+body {
+    color: black;
+    font-family: $bodyFont;
+
+    @include breakpoint(medium) {
+        p {
+            line-height: 1.6;
+            font-size: 1.3rem;
+
+        }
+
+    }
+}
+#app a {
+   color: white;
+   text-decoration: underline;
+}
+
+p {
+    padding-top: 1rem;
+}
+.hr {
+    height: 2px;
+    background-color: #5a5a5a;
+}
+
+.w-100 {
+    width: 100%;
+}
+.panel {
+    background-color: #0009;
+}
+.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pin {
+    position: fixed !important;
+}
+
+.frame {
+    padding: 2rem;
+
+    @include breakpoint(medium) {
+        padding: 4rem 4rem;
+    }
+    &.bright {
+        background-color: $c-orange;
+        h2 {
+            color: white;
+        }
+    }
+}
+.content-panel {
+    min-height: 100vh;
+    outline: 1px solid black;
+    border-bottom: 10px solid red;
+}
+
+video {
+    width: 100%;
+}
+.video {
+
+    position: relative;
+    @include breakpoint(medium) {
+        width: 80%;
+    }
+    @include breakpoint(xlarge) {
+        width: 60%;
+        // height: 70vh;
+    }
+    nav {
+        z-index: 1;
+        width: 100%;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(medium) {
+            position: absolute;
+        }
+    
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 55px;
+            height: auto;
+            transition: width 1s ease-in-out;
+            &:focus {
+                outline: none;
+            }
+            &:disabled {
+                cursor: default;
+                opacity: 0.3;
+            }
+            @include breakpoint(large) {
+                width: 76px;
+            }
+        }
+    }
+}
+
+#Header {
+    background-color: $c-orange;
+    // .hero {
+    //     height: calc(80vh - 10rem);
+
+    // }
+    .brand {
+        width: 120px;
+    }
+    .tag {
+        padding-top: 1rem;
+        @include breakpoint(medium) {
+            padding-top: 0;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+}
+
+.brand-bar {
+    padding: 1.4rem 0 1rem;
+}
+
+.hero {
+    position: relative;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    // height: 100%;
+    min-height: calc(80vh - 10rem);
+    background-size: cover;
+    background-position: 50% 30%;
+    // background-image: url("<%= path %>/images/hero.png");
+
+    #hero {
+        opacity: 0.6;
+    }
+    #headline {
+        position: relative;
+    }
+
+    h1 {
+        font-family: "Guardian Headline Full";
+        font-weight: 600;
+        text-shadow: 0px 2px 0px rgba(0,0,0,0.3);
+        font-size: 2.5rem;
+        @include breakpoint(medium) {
+            font-size: 2.75rem;
+        }
+    
+        @include breakpoint(xlarge) {
+            font-size: 3.75rem;
+        }
+    }
+
+    .block {
+        width: 90%;
+        @include breakpoint(medium) {
+            width: 60%;
+        }
+        // @include breakpoint(xlarge) {
+        //     width: 40%;
+        // }
+
+    }
+
+    h1 {
+        padding: 2rem;
+    }
+
+}
+
+.chapter-1 {
+    .article-1 {
+        background-size: 150%;
+    }
+
+    ul.test-steps {
+        counter-reset: steps;
+        @extend .list-unstyled;
+
+        li {
+            text-align: center;
+            margin-bottom: 2rem;
+            p {
+                padding-top: 0;
+                margin-top: 0;
+            }
+            &:before {
+                counter-increment: steps;
+                content: counter(steps);
+                background-color: $c-orange;
+                border-radius: 50%;
+                display: inline-block;
+                line-height: 1;
+                font-size: 2rem;
+                min-width: 2rem;
+                margin: 2rem 0 1rem;
+                padding: 0.5rem;
+            }
+
+            img {
+                border: 1px solid $c-orange;
+                display: block;
+            }
+        }
+    }
+
+    .article-2 {
+        background-size: cover;
+    }
+}
+
+
+
+.chapter-2 {
+    .article-1 {
+        background-size: cover;
+    }
+}
+
+.steps {
+    position: relative;
+    .fix {
+        position: absolute;
+        background: no-repeat 50% 0;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        &.pin {
+            position: fixed;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    h2 {
+        color: white;
+    }
+    background-color: #121212;
+}
+
+.related-content {
+    display: grid;
+    
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    column-gap: 2rem;
+    li {
+        margin: 1rem 0;
+        display: flex;
+        // align-items: center;
+        background-color: #B8B8B8;
+        border-left: 0 solid var(--c-orange);
+        transition: border 200ms ease-in-out;
+        &:hover, &:focus {
+            border-left-width: 10px;
+        }
+        a {
+            color: #121212 !important;
+            text-decoration: none !important;
+            padding: 1rem;
+            display: block;
+
+        }
+    }
+}
+
+.bg-video-container {
+    position: relative;
+    > video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+video.fix {
+    width: 100vw;
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+
+    li {
+        display: inline-block;
+        padding-right: 5px;
+    }
+}
+
+.quad-hr {
+    padding-top: 2rem;
+    .hr {
+        margin: 2px 0;
+    }
+}
+
+section, article {
+    position: relative;
+}

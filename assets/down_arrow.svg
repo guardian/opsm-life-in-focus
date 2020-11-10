@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="33px" height="34px" viewBox="0 0 33 34" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Arrow">
+    <path d="M16.3644 0C7.32651 0 0 7.43415 0 16.6049C0 25.7741 7.32651 33.2098 16.3644 33.2098C25.4024 33.2098 32.7284 25.7741 32.7284 16.6049C32.7284 7.43415 25.4024 0 16.3644 0" id="Fill-1" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    <path d="M15.289 0L7.99825 6.58571L0.710967 0L0 0.767596L6.57732 7.87042L6.57632 7.87042L7.62705 9L8.37245 9L9.42168 7.87042L16 0.767596L15.289 0Z" transform="translate(7.999756 13.7247925)" id="Fill-4" fill="#000000" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+
+    
+
+<script id="btnPlay" type="text/ractive">
+    <button class="btn-play" on-click="videotoggle">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 67 69" style="enable-background:new 0 0 67 69;" xml:space="preserve">
+    <desc>Created with Lunacy</desc>
+    <g id="Pause-Button" transform="translate(0.5 0.5)">
+        <g transform="translate(0 0.47926128)">
+            <path id="Fill-1" style="fill-rule:evenodd;clip-rule:evenodd;fill:#131A1C;fill-opacity:0.4039;stroke:#FFFFFF;" d="M32.7,0.5
+            C14.7,0.5,0,15.4,0,33.7C0,52,14.7,66.8,32.7,66.8S65.5,52,65.5,33.7C65.5,15.4,50.8,0.5,32.7,0.5"/>
+        </g>
+        {{#if playing}}
+       <g >
+           <path id="Fill-4" style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M29.7,44.7h-6V25.1l1.5-1.5h4.5V44.7z"/>
+           <path id="Fill-6" style="fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;" d="M41.6,43.2l-1.5,1.5h-4.5V23.6h6V43.2z"/>
+       </g>
+       {{else}}
+       <g >
+           <polygon style="fill:#FFFFFF;" points="45.7,33.7 23,24.3 22.3,24.9 22.3,43.5 23,44 45.7,34.7 		"/>
+       </g>
+       {{/if}}
+    </g>
+    </svg>
+
+</button>
+</script>     
+<script id="btnCaptions" type="text/ractive">
+    <button class="btn-captions" on-click="toggle" {{#if disabled}}disabled{{/if}} >
+        <svg viewBox="0 0 67 67" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <desc>Created with Lunacy</desc>
+            <g transform="translate(0.5 0.5)">
+                {{#if active}}
+                <path d="M32.7289 0C14.653 0 0 14.655 0 32.7309C0 50.8017 14.653 65.4578 32.7289 65.4578C50.8048 65.4578 65.4578 50.8017 65.4578 32.7309C65.4578 14.655 50.8048 0 32.7289 0" transform="translate(1.7053026E-13 0.00020307692)" id="Fill-1" fill="#131A1C" fill-opacity="0.40392157" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+                <path style="fill:#FFFFFF;" d="M20.3,31c0.1-4,2.1-5.3,5.6-5.3c1.9,0,3.2,0.4,4.6,0.9v-3.9c-1.2-0.7-2.9-1-5.4-1
+                c-5.4,0-9.7,2.4-10.1,9.4L20.3,31L20.3,31z"/>
+            <path style="fill:#FFFFFF;" d="M38.1,31c0.1-4,2.1-5.3,5.6-5.3c1.9,0,3.2,0.4,4.6,0.9v-3.9c-1.2-0.7-2.9-1-5.4-1
+                c-5.4,0-9.7,2.4-10.1,9.4L38.1,31L38.1,31z"/>
+            <path style="fill:#FFFFFF;" d="M38.1,35.5h-5.3c0.5,6.2,4.1,9,9.7,9c2.7,0,4.5-0.5,5.9-1.2v-3.9c-1.1,0.5-2.6,1.1-4.9,1.1
+                C40,40.3,38.5,38.7,38.1,35.5z"/>
+            <path style="fill:#FFFFFF;" d="M20.3,35.5H15c0.5,6.2,4.1,9,9.7,9c2.7,0,4.5-0.5,5.9-1.2v-3.9c-1.1,0.5-2.6,1.1-4.9,1.1
+                C22.1,40.3,20.7,38.7,20.3,35.5z"/>
+            <polyline style="fill:#FFFFFF;" points="56.5,32 56.5,34.4 8.5,34.4 8.5,32 56.5,32 		"/>
+              {{else}}
+                <path d="M32.7289 0C14.653 0 0 14.655 0 32.7309C0 50.8017 14.653 65.4578 32.7289 65.4578C50.8048 65.4578 65.4578 50.8017 65.4578 32.7309C65.4578 14.655 50.8048 0 32.7289 0" transform="translate(1.7053026E-13 0.00020307692)" id="Fill-1" fill="#131A1C" fill-opacity="0.40392157" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+                <path d="M9.68677 22.6938C12.3674 22.6938 14.1342 22.2065 15.5658 21.4449L15.5658 17.5154L15.1771 17.6894C14.1041 18.1547 12.7262 18.612 10.7225 18.612C6.66784 18.612 5.29769 16.6278 5.24122 12.5167L5.23938 9.80862C5.23938 5.48308 7.24985 4.08185 10.7834 4.08185C12.672 4.08185 13.9514 4.44738 15.3831 4.96523L15.3831 1.03569C14.1646 0.365538 12.4892 0 10.0523 0C4.44738 0 0 2.61969 0 10.296L0 12.4588C0 19.5868 3.68585 22.6938 9.68677 22.6938ZM27.0295 22.6938C21.0286 22.6938 17.3428 19.5868 17.3428 12.4588L17.3428 10.296C17.3428 2.61969 21.7902 0 27.3951 0C29.832 0 31.5074 0.365538 32.7258 1.03569L32.7258 4.96523C31.2942 4.44738 30.0148 4.08185 28.1262 4.08185C24.5926 4.08185 22.5822 5.48308 22.5822 9.80862L22.5822 12.2455C22.5822 16.5406 23.9225 18.612 28.0652 18.612C30.3194 18.612 31.7815 18.0332 32.9086 17.5154L32.9086 21.4449C31.4769 22.2065 29.7102 22.6938 27.0295 22.6938Z" transform="translate(15.403486 21.333231)"fill="#FFFFFF" stroke="none" />
+              {{/if}}
+            </g>
+          </svg>
+
+</button>
+</script>
+<script id="btnMute" type="text/ractive">
+    <button class="btn-mute" on-click="toggle">
+        <svg viewBox="0 0 67 69" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <desc>Created with Lunacy</desc>
+            <g transform="translate(0.5 0.5)">
+              <g transform="translate(0 0.4799812)">
+                <path d="M32.7289 0C14.653 0 0 14.8417 0 33.1503C0 51.4558 14.653 66.3006 32.7289 66.3006C50.8048 66.3006 65.4578 51.4558 65.4578 33.1503C65.4578 14.8417 50.8048 0 32.7289 0" transform="translate(-0.00010153846 0.5494021)" id="Fill-1" fill="#131A1C" fill-opacity="0.40392157" fill-rule="evenodd" stroke="#FFFFFF" stroke-width="1" />
+              </g>
+
+              {{#if muted}}
+              <g>
+                  <polygon style="fill:#FFFFFF;" points="30.8,20.7 22.9,28.6 17.4,28.6 16,30 16,38 17.3,39.3 22.8,39.3 30.8,47.3 32.3,47.3 
+                  32.3,20.7 		"/>
+                  <polygon style="fill:#FFFFFF;" points="37.4,27.6 36.6,28.4 42.1,34.4 48.2,40 49,39.2 43.5,33.1 		"/>
+                  <polygon style="fill:#FFFFFF;" points="36.6,39.2 37.4,40 43.5,34.4 49,28.4 48.2,27.6 42.1,33.1 		"/>
+                </g>
+                
+                {{else}}
+                <path d="M14.8744 0L6.9036 8.07236L1.43982 8.07236L0 9.51426L0 17.6679L1.29868 18.9812L6.83862 18.9812L14.8764 27.1256L16.3761 27.1256L16.3761 0.00205692L14.8744 0Z" transform="translate(16.36404 20.613789)" id="Fill-4" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+                <path d="M3.66046 11.5928C3.66046 15.6583 2.28462 19.3916 0 22.372L0.803169 23.1856C4.10622 20.4334 6.21517 16.263 6.21517 11.5928C6.21517 6.92255 4.10622 2.75215 0.803169 0L0 0.81351C2.28462 3.79192 3.66046 7.52728 3.66046 11.5928" transform="translate(42.792877 22.549656)" id="Fill-6" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+                <path d="M1.90588 7.31645C1.90588 9.66853 1.20323 11.8509 0 13.6631L0.957508 14.6329C2.80348 12.7611 3.95188 10.1735 3.95188 7.31645C3.95188 4.45939 2.80348 1.87179 0.957508 0L0 0.969836C1.20323 2.78095 1.90588 4.96437 1.90588 7.31645" transform="translate(36.88547 26.825983)" id="Fill-8" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+            {{/if}}
+        
+            </g>
+          </svg>
+</button>
+</script>
+
+     <div class="interactive-wrapper">
+
+    <div>
+        
+        <div id="app"></div>
+
+    </div>
+
+</div>
