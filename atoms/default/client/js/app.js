@@ -11,9 +11,11 @@ import MainHtml from 'shared/templates/main.html';
 import {gsap, Sine} from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
-import React from "preact"
-import ReactDOM from 'preact-dom';
-//import SocialBar from 'shared/js/SocialShareIcons';
+// import React from "preact"
+// import ReactDOM from 'preact-dom';
+// import SocialBar from 'shared/js/SocialShareIcons';
+import { render, h } from "preact";
+import SocialBar from 'shared/js/SocialShare';
 
 import Ractive from 'ractive';
 
@@ -221,12 +223,17 @@ var app = {
 						});
 						gsap.from('#app', {alpha: 0, duration: 2, delay:2});
 						gsap.set('#app', {alpha: 0});
-						/*
-						ReactDOM.render(<SocialBar 
+						
+						// ReactDOM.render(<SocialBar 
+							// url={this.get('sheets.global[0].shareUrl')}
+							// title={this.get('sheets.global[0].shareTitle')}
+						//  />, document.getElementById('social'));
+						render(<SocialBar 
 							url={this.get('sheets.global[0].shareUrl')}
 							title={this.get('sheets.global[0].shareTitle')}
-						 />, document.getElementById('social'));
-						 setTimeout(scrollwatch, 1500, this); */
+						/>, document.getElementById('social'));
+
+						setTimeout(scrollwatch, 1500, this);
 
 						// Promise.all(['#hero','#ch1bg','#ch2bg','#ch1outrobg','#ch2outrobg'].map((trg)=>{
 						// 	console.log(trg);
